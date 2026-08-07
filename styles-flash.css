@@ -1,0 +1,164 @@
+body {
+    background-color: whitesmoke;
+    color: midnightblue;
+    font-family: Arial, sans-serif;  
+}
+
+.container {
+    background-color: rgb(231, 242, 241);
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+    margin: 20px auto;
+    padding: 10px 20px;
+    box-shadow: 0 5px 15px rgb(19, 57, 66);
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+.center {
+    text-align: center;
+}
+
+.description {
+    font-size: 1.2rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(65, 81, 255)
+}
+
+a:active {
+    color: rgb(42, 151, 135)
+}
+
+.nav-flash-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+.link-btn {
+  cursor: pointer;
+  background-color: rgb(163, 226, 247);
+  color: midnightblue;
+  border-radius: 6px;
+  width: 120px;
+  height: 50px;
+  font-size: 1.1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s;
+}
+
+.font-ui {
+  font-size: 0.9rem;
+}
+
+fieldset {
+    border: 1px solid gray;
+    border-radius: 5px;
+    margin: 20px 0;
+    padding: 20px;
+}
+
+fieldset legend {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+#sub-category-options {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#sub-category-options.animate {
+  animation: optionAppear 0.3s ease forwards;
+}
+
+@keyframes optionAppear {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.info {
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+label {
+  font-size: 1.2rem;
+}
+
+label:not(.support) {
+  display: block;
+  margin: 10px 0;
+}
+
+input:not(.support-btn):not(.type-btn), textarea {
+  background-color: #ffffff1a;
+  width: 95%;
+  border: 1px solid gray;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+input, input::placeholder, textarea {
+  color: rgb(19, 147, 170);
+  font-size: 1em;
+  font-family: Arial, sans-serif;
+}
+
+.type-btn {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid gray;
+  vertical-align: bottom;
+}
+
+.type-btn::before {
+  display: block;
+  content: " ";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  transform: translate(3px, 3px) scale(0);
+  transition: all 0.3s ease-in;
+}
+
+.type-btn:checked::before {
+  transform: translate(3px, 3px) scale(1);
+  background-color: rgb(19, 147, 170);
+}
+
+.create-btn {
+  cursor: pointer;
+  background-color: rgb(163, 226, 247);
+  color: midnightblue;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 20px;
+  font-size: 1.1rem;
+  display: block;
+  margin: auto;
+  transition: background-color 0.3s;
+}
+
+.create-btn:hover {
+  background-color: rgb(115, 255, 232);
+}

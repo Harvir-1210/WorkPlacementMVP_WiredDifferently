@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="styles-flash.css" rel="stylesheet">
+        <title>Flash Card 4</title>
+    </head>
+    <body>
+        <header class="center">
+            <h1>Flash Card 4</h1>
+            <p class="description">You can create flash cards here. This is the fourth one.</p>
+            <div class="nav-flash-links">
+                <a class="link-btn" href="prototype_home.html">Home Page</a>
+                <a class="link-btn" href="prototype_flash3.html">Flash Card 3</a>
+                <a class="link-btn" href="prototype_flash5.html">Flash Card 5</a>
+                <a class="link-btn font-ui" href="prototype_flash_help.html">Flash Card Help</a>
+            </div>
+        </header>
+
+        <main class="container">
+            <form id="form-options">
+                <input type="hidden" id="card-number" value="3">
+                <fieldset>
+                    <legend class="info">Main Information</legend>
+                    <label for="disability">What neurodivergent trait do you want to list?</label>
+
+                    <select name="disability" id="disability" required>
+                        <option value="" selected disabled>Select an option</option>
+                        <option value="Verbalism">Verbalism</option>
+                        <option value="Sensory">Sensory</option>
+                        <option value="Support">Support</option>
+                        <option value="Monotropic">Monotropic</option>
+                    </select>
+                </fieldset>
+
+                <fieldset id="sub-category" style="display: none;">
+                    <legend class="sub-category">
+                        Please specify the type of trait you want to list.
+                    </legend>
+
+                    <div id="sub-category-options"></div>
+                </fieldset>
+
+                <fieldset>
+                    <legend class="info">Extra Information (Recommended)</legend>
+                    <label for="explain">
+                        Write in this text box what people should do if they see you acting
+                        with this trait.
+                    </label>
+                    <textarea 
+                        rows="4" 
+                        maxlength="200"
+                        name="explain" 
+                        id="explain" 
+                        placeholder="e.g. 'I would like you to...'"></textarea>
+                </fieldset>
+
+                <button type="submit" class="create-btn" id="submit-btn">Create</button>
+            </form>
+        </main>
+    </body>
+    <script src="flash.js"></script>
+</html>
