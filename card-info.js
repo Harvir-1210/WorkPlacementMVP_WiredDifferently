@@ -8,7 +8,7 @@ document.getElementById("explanation").textContent = card.explanation;
 
 document.getElementById("edit-btn").addEventListener("click", () => {
   localStorage.setItem("editingCard", selectedCard);
-  window.location.href = `prototype_flash${Numer(selectedCard) + 1}.html`;
+  window.location.href = `prototype_flash${Number(selectedCard) + 1}.html`;
 });
 
 document.getElementById("delete-btn").addEventListener("click", () => {
