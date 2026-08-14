@@ -6,7 +6,7 @@ if (selectedCard === null || !cards[Number(selectedCard)]) {
 }
 const card = cards[Number(selectedCard)];
 
-document.getElementById("explanation").textContent = card.explanation;
+document.getElementById("explanation-text").textContent = card.explanation;
 document.getElementById("trait").textContent = card.trait;
 document.getElementById("type").textContent = card.type;
 
