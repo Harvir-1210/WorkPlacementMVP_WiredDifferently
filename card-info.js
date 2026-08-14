@@ -6,9 +6,9 @@ if (selectedCard === null || !cards[Number(selectedCard)]) {
 }
 const card = cards[Number(selectedCard)];
 
+document.getElementById("explanation").textContent = card.explanation;
 document.getElementById("trait").textContent = card.trait;
 document.getElementById("type").textContent = card.type;
-document.getElementById("explanation").textContent = card.explanation;
 
 document.getElementById("edit-btn").addEventListener("click", () => {
   localStorage.setItem("editingCard", selectedCard);
