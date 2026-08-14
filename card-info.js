@@ -6,7 +6,6 @@ if (selectedCard === null || !cards[Number(selectedCard)]) {
 }
 const card = cards[Number(selectedCard)];
 
-document.getElementById("card-title").textContent = `Flash Card ${Number(selectedCard) + 1}`;
 document.getElementById("trait").textContent = card.trait;
 document.getElementById("type").textContent = card.type;
 document.getElementById("explanation").textContent = card.explanation;
