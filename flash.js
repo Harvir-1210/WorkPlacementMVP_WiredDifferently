@@ -48,7 +48,7 @@ disabilitySelect.addEventListener("change", () => {
 });
 
 if (editingCard !== null) {
-    document.querySelectorAll(".nav-links").forEach(nav => {
+    document.querySelectorAll(".nav-flash-links").forEach(nav => {
         nav.style.display = "none";
     });
     const cards = JSON.parse(localStorage.getItem("flashCards")) || [];
