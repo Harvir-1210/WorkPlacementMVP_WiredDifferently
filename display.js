@@ -17,15 +17,18 @@ if (activeCards.length > 0) {
         const flashCard = document.createElement("section");
         flashCard.className = "display-card";
         flashCard.innerHTML = `
-            <h2>Flash Card ${index + 1}</h2>
-            <p><strong>Trait:</strong> ${card.trait}</p>
-            <p><strong>Type:</strong> ${card.type}</p>
-            <p class="explanation">${card.explanation}</p>
-
-            <button type="button" class="edit-btn" data-index="${index}">Edit</button>
-            <button type="button" class="delete-btn" data-index="${index}">Delete</button>
+            <a href="prototype_flash_info.html" class="card-link" data-index="${index}">
+                Flash Card ${index + 1}
+            </a>
         `;
         flashCardContainer.appendChild(flashCard);
+    });
+
+    const cardLinks = document.querySelectorAll(".card-link");
+    cardLinks.forEach(link => {
+        link.addEventListener("click", () => {
+            localStorage.setItem("selectedCard", link.dataset.index);
+        });
     });
 
     const editButtons = document.querySelectorAll(".edit-btn");
