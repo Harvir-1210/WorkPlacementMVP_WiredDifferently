@@ -80,23 +80,14 @@ a:active {
     width: 90%;
     max-width: 500px;
     box-shadow: 0 5px 15px rgb(19, 57, 66);
-    text-align: left;
-}
-
-.display-card h2 {
     text-align: center;
+}
+
+.card-link {
+    display: block;
+    font-size: 1.3rem;
     color: midnightblue;
-    font-size: 1.5rem;
-}
-
-.display-card p {
-    margin: 12px 0;
-    font-size: 1.1rem;
-    line-height: 1.5;
-}
-
-.display-card strong {
-    color: rgb(19, 147, 170);
+    padding: 10px;
 }
 
 .edit-btn, .delete-btn {
