@@ -1,5 +1,9 @@
 const selectedCard = localStorage.getItem("selectedCard");
 const cards = JSON.parse(localStorage.getItem("flashCards")) || [];
+if (selectedCard === null || !cards[Number(selectedCard)]) {
+  window.location.href = "prototype_flash_display.html";
+  throw new Error("No flash card selected.")
+}
 const card = cards[Number(selectedCard)];
 
 document.getElementById("card-title").textContent = `Flash Card ${Number(selectedCard) + 1}`;
