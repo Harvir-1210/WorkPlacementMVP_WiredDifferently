@@ -70,7 +70,7 @@ if (editingCard !== null) {
         submitButton.textContent = "Update";
     } else {
         localStorage.removeItem("editingCard");
-        window.location.href = "prototype_home.html";
+        window.location.href = "index.html";
     }
 }
 
