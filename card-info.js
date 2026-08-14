@@ -1,7 +1,21 @@
 const selectedCard = localStorage.getItem("selectedCard");
-const card = JSON.parse(localStorage.getItem("flashCards")) || [];
+const cards = JSON.parse(localStorage.getItem("flashCards")) || [];
 const card = cards[Number(selectedCard)];
 
 document.getElementById("card-title").textContent = `Flash Card ${Number(selectedCard) + 1}`;
 document.getElementById("type").textContent = card.type;
 document.getElementById("explanation").textContent = card.explanation;
+
+document.getElementById("edit-btn").addEventListener("click", () => {
+  localStorage.setItem("editingCard", selectedCard);
+  window.location.href = `prototype_flash${Numer(selectedCard) + 1}.html`;
+});
+
+document.getElementById("delete-btn").addEventListener("click", () => {
+  if (confirm("Are you sure you want to delete this flash card?")) {
+    cards[Number(selectedCard)] = null;
+    localStorage.setItem("flashCards", JSON.stringify(cards));
+    localStorage.removeItem("selectedCard");
+    window.location.href = "prototype_flash_display.html";
+  }
+});
