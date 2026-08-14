@@ -30,25 +30,4 @@ if (activeCards.length > 0) {
             localStorage.setItem("selectedCard", link.dataset.index);
         });
     });
-
-    const editButtons = document.querySelectorAll(".edit-btn");
-    editButtons.forEach(button => {
-        button.addEventListener("click", () => {
-            const index = button.dataset.index;
-            localStorage.setItem("editingCard", index);
-            window.location.href = `prototype_flash${Number(index) + 1}.html`
-        });
-    });
-
-    const deleteButtons = document.querySelectorAll(".delete-btn");
-    deleteButtons.forEach(button => {
-        button.addEventListener("click", () => {
-            const index = button.dataset.index;
-            if (confirm("Are you sure you want to delete this flash card?")) {
-                cards[index] = null;
-                localStorage.setItem("flashCards", JSON.stringify(cards));
-                location.reload()
-            }
-        });
-    });
 }
