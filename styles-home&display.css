@@ -81,6 +81,10 @@ a:active {
     max-width: 180px;
     box-shadow: 0 5px 15px rgb(19, 57, 66);
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
 }
 
 .card-link {
