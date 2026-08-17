@@ -85,6 +85,7 @@ a:active {
 
 .card-link {
     display: block;
+    width: 50px;
     font-size: 1.3rem;
     color: midnightblue;
     padding: 10px;
