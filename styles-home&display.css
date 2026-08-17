@@ -80,6 +80,10 @@ a:active {
     gap: 20px;
 }
 
+#card-basis {
+    flex-basis: 100%;
+}
+
 .display-card {
     background-color: rgb(231, 242, 241);
     border-radius: 10px;
