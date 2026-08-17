@@ -73,19 +73,17 @@ a:active {
 }
 
 #flash-card-container {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(3, 180px);
     justify-content: center;
-    align-items: flex-start;
-    flex-wrap: wrap;
     gap: 20px;
 }
 
 .display-card {
     background-color: rgb(231, 242, 241);
     border-radius: 10px;
-    margin: 20px auto;
     padding: 20px;
+    box-sizing: border-box;
     width: 180px;
     box-shadow: 0 5px 15px rgb(19, 57, 66);
     text-align: center;
