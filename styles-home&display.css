@@ -87,10 +87,12 @@ a:active {
 }
 
 .card-link {
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
     font-size: 1.3rem;
     color: midnightblue;
     padding: 10px;
+    align-content: space-evenly;
 }
 
 #edit-btn, #delete-btn {
