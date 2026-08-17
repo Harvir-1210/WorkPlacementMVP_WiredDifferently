@@ -43,6 +43,13 @@ a:active {
     color: rgb(42, 151, 135)
 }
 
+#flash-card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
 .nav-display-links {
   display: flex;
   justify-content: center;
