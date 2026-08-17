@@ -73,8 +73,9 @@ a:active {
 }
 
 #flash-card-container {
-    display: grid;
-    grid-template-columns: repeat(3, 180px);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
 }
@@ -85,6 +86,7 @@ a:active {
     padding: 20px;
     box-sizing: border-box;
     width: 180px;
+    margin: 0;
     box-shadow: 0 5px 15px rgb(19, 57, 66);
     text-align: center;
 }
