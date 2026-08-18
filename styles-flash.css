@@ -59,10 +59,6 @@ a:active {
   transition: background-color 0.3s;
 }
 
-.font-ui {
-  font-size: 0.9rem;
-}
-
 fieldset {
     border: 1px solid gray;
     border-radius: 5px;
