@@ -1,0 +1,97 @@
+body {
+  font-family: Arial, sans-serif;
+  font-size: 1.8rem;
+}
+
+main {
+  width: 70%;
+  margin: 30px auto;
+  font-size: 1.5rem;
+}
+
+header {
+  width: 100%;
+}
+
+.header, .id-card-area, .flash-card-explanation {
+  display: flex;
+  flex-direction: row;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.title h1 {
+  margin: 0;
+}
+
+.home-nav-links {
+  display: flex;
+  gap: 12px;
+}
+
+.home-link-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: rgb(119, 228, 137);
+  color: white;
+  padding: 0;
+  width: 150px;
+  height: 50px;
+  font-size: 1.3rem;
+  transition: background-color 0.3s;
+}
+
+.home-link-btn:hover {
+  background-color: rgb(27, 244, 63);
+}
+
+.logo {
+  width: 235px;
+  height: auto;
+  flex-shrink: 0;
+}
+
+img:not(.logo) {
+  width: 300px;
+  height: auto;
+}
+
+.id-card-area {
+  gap: 40px;
+}
+
+.flash-card-explanation {
+  gap: 80px;
+}
+
+.id-card-area, .flash-card-explanation {
+  display: flex;
+  align-items: center;
+}
+
+.id-description, .flash-description {
+  width: 70%;
+}
+
+.attentive {
+  font-size: 1.3em;
+  text-align: center;
+}
