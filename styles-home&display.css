@@ -129,12 +129,9 @@ a:active {
 }
 
 .explanation {
+  font-size: 1.2em;
   white-space: normal;
   overflow-wrap: break-word;
   word-wrap: break-word;
   word-break: normal;
-}
-
-.importancy {
-  font-size: 0.65rem;
 }
