@@ -1,6 +1,6 @@
 body {
     background-color: rgb(239, 235, 235);
-    color: midnightblue;
+    color: rgb(40, 56, 37);
     font-family: Arial, sans-serif;
     text-align: center;
 }
@@ -22,10 +22,9 @@ img {
 
 .display-btn {
   cursor: pointer;
-  background-color: rgb(163, 226, 247);
-  color: midnightblue;
-  border-radius: 6px;
-  width: 250px;
+  background-color: rgb(119, 228, 137);
+  color: white;
+  width: 235px;
   height: 60px;
   font-size: 1.35rem;
   display: flex;
@@ -34,4 +33,9 @@ img {
   transition: background-color 0.3s;
   text-decoration: none;
   margin: 20px auto;
+  transition: background-color 0.3s;
+}
+
+.display-btn:hover {
+  background-color: rgb(27, 244, 63);
 }
