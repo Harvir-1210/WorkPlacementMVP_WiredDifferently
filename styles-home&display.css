@@ -134,3 +134,7 @@ a:active {
   word-wrap: break-word;
   word-break: normal;
 }
+
+.importancy {
+  font-size: 0.8em;
+}
