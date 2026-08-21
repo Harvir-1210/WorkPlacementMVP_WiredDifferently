@@ -44,7 +44,7 @@ header {
   gap: 12px;
 }
 
-.home-link-btn {
+.link-btn {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -59,7 +59,7 @@ header {
   transition: background-color 0.3s;
 }
 
-.home-link-btn:hover {
+.link-btn:hover {
   background-color: rgb(27, 244, 63);
 }
 
@@ -69,9 +69,16 @@ header {
   flex-shrink: 0;
 }
 
-img:not(.logo) {
+img:not(.logo, .img-info) {
   width: 300px;
   height: auto;
+}
+
+.img-info {
+  width: 700px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
 
 .id-card-area {
@@ -94,4 +101,36 @@ img:not(.logo) {
 .attentive {
   font-size: 1.3em;
   text-align: center;
+}
+
+hr {
+  border: none;
+  height: 5px;
+  background: linear-gradient(to right, white, grey, white);
+}
+
+.align {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.align, h2 {
+  margin: 0;
+}
+
+.circle {
+  width: 50px;
+  height: 50px;
+  background: rgb(156, 241, 129);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gap {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
 }
