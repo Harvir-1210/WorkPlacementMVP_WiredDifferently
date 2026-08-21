@@ -1,17 +1,17 @@
 body {
     background-color: whitesmoke;
-    color: midnightblue;
     font-family: Arial, sans-serif;  
 }
 
 .container {
-    background-color: rgb(231, 242, 241);
+    background-color: rgb(204, 233, 203);
+    color: rgb(40, 56, 37);
+    border-radius: 10px;
     width: 80%;
     max-width: 600px;
-    border-radius: 10px;
     margin: 20px auto;
     padding: 10px 20px;
-    box-shadow: 0 5px 15px rgb(19, 57, 66);
+    box-shadow: 0 10px 20px rgb(45, 126, 58);
 }
 
 h1 {
@@ -30,14 +30,6 @@ a {
     text-decoration: none;
 }
 
-a:hover {
-    color: rgb(65, 81, 255)
-}
-
-a:active {
-    color: rgb(42, 151, 135)
-}
-
 .nav-flash-links {
   display: flex;
   justify-content: center;
@@ -47,9 +39,8 @@ a:active {
 
 .link-btn {
   cursor: pointer;
-  background-color: rgb(163, 226, 247);
-  color: midnightblue;
-  border-radius: 6px;
+  background-color: rgb(119, 228, 137);
+  color: white;
   width: 120px;
   height: 50px;
   font-size: 1.1rem;
@@ -57,6 +48,10 @@ a:active {
   justify-content: center;
   align-items: center;
   transition: background-color 0.3s;
+}
+
+.link-btn:hover {
+  background-color: rgb(27, 244, 63);
 }
 
 fieldset {
@@ -144,8 +139,8 @@ input, input::placeholder, textarea {
 
 .create-btn {
   cursor: pointer;
-  background-color: rgb(163, 226, 247);
-  color: midnightblue;
+  background-color: rgb(123, 239, 229);
+  color: rgb(25, 112, 82);
   border: none;
   border-radius: 6px;
   padding: 12px 20px;
@@ -156,5 +151,5 @@ input, input::placeholder, textarea {
 }
 
 .create-btn:hover {
-  background-color: rgb(115, 255, 232);
+  background-color: rgb(85, 249, 153);
 }
