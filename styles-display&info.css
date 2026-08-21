@@ -1,18 +1,17 @@
 body {
-    background-color: whitesmoke;
-    color: midnightblue;
+    background-color: rgb(241, 238, 238);
     font-family: Arial, sans-serif;  
     font-size: 1.3em;
 }
 
 .container {
-    background-color: rgb(231, 242, 241);
+    background-color: rgb(211, 238, 214);
+    color: rgb(40, 56, 37);
     width: 80%;
     max-width: 600px;
-    border-radius: 10px;
     margin: 20px auto;
     padding: 10px 20px;
-    box-shadow: 0 5px 15px rgb(19, 57, 66);
+    box-shadow: 0 10px 20px rgb(45, 126, 58);
 }
 
 h1 {
@@ -35,14 +34,6 @@ a {
     text-decoration: none;
 }
 
-a:hover {
-    color: rgb(65, 81, 255)
-}
-
-a:active {
-    color: rgb(42, 151, 135)
-}
-
 .nav-display-links {
   display: flex;
   justify-content: center;
@@ -52,9 +43,8 @@ a:active {
 
 .link-btn {
   cursor: pointer;
-  background-color: rgb(163, 226, 247);
-  color: midnightblue;
-  border-radius: 6px;
+  background-color: rgb(119, 228, 137);
+  color: white;
   width: 120px;
   height: 50px;
   font-size: 1.1rem;
@@ -62,6 +52,9 @@ a:active {
   justify-content: center;
   align-items: center;
   transition: background-color 0.3s;
+}
+.link-btn:hover {
+  background-color: rgb(27, 244, 63);
 }
 
 .flash-title {
@@ -85,20 +78,24 @@ a:active {
 }
 
 .display-card {
-    background-color: rgb(231, 242, 241);
-    border-radius: 10px;
+    background-color: rgb(177, 240, 227);
     padding: 20px;
     box-sizing: border-box;
     width: 180px;
     margin: 0;
-    box-shadow: 0 5px 15px rgb(19, 57, 66);
+    box-shadow: 0 10px 20px rgb(45, 126, 95);
     text-align: center;
+    transition: background-color 0.3s;
+}
+
+.display-card:hover {
+  background-color: rgb(126, 253, 175)
 }
 
 .card-link {
     display: block;
     font-size: 1.3rem;
-    color: midnightblue;
+    color: rgb(32, 109, 64);
     padding: 10px;
 }
 
@@ -109,29 +106,22 @@ a:active {
     padding: 8px 15px;
     font-size: 1rem;
     margin: 5px;
-    color: midnightblue
 }
 
 #edit-btn {
-    background-color: rgb(163, 226, 247);
+    color: rgb(25, 112, 105);
+    background-color: rgb(163, 247, 169);
 }
 
 #edit-btn:hover {
-    background-color: rgb(115, 255, 232);
+    background-color: rgb(134, 255, 115);
 }
 
 #delete-btn {
+    color: rgb(100, 47, 47);
     background-color: rgb(255, 170, 170);
 }
 
 #delete-btn:hover {
     background-color: rgb(255, 100, 100);
-}
-
-.explanation {
-  font-size: 1.2em;
-  white-space: normal;
-  overflow-wrap: break-word;
-  word-wrap: break-word;
-  word-break: normal;
 }
