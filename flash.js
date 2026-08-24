@@ -124,7 +124,7 @@ formOptions.addEventListener("submit", (event) => {
     const selectedColour = document.querySelector(
         "input[name='card-colour']:checked"
     );
-    const selectedType = document.querySelector("input[type='radio']:checked");
+    const selectedType = document.querySelector(".type-btn:checked");
     if (!selectedType && disabilitySelect.value != "Monotropic") {
         alert("Please choose a trait type.");
         return;
