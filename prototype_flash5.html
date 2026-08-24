@@ -35,11 +35,18 @@
                 </fieldset>
 
                 <fieldset id="sub-category" style="display: none;">
-                    <legend class="sub-category">
+                    <legend id="sub-category-title" class="sub-category">
                         Please specify the type of trait you want to list.
                     </legend>
 
                     <div id="sub-category-options"></div>
+
+                    <label>
+                        This trait type can also be expressed with a background colour
+                        for your flash card. Choose one here. (Optional)
+                    </label>
+
+                    <div id="colour-options"></div>
                 </fieldset>
 
                 <fieldset>
@@ -54,6 +61,11 @@
                         name="explain" 
                         id="explain" 
                         placeholder="e.g. 'I would like you to...'"></textarea>
+                    <label for="name">
+                        You should also set a custom name for your Flash Card to remember it
+                        more easily. (Recommended)
+                    </label>
+                    <input id="name" type="text" maxlength="20">
                 </fieldset>
 
                 <button type="submit" class="create-btn" id="submit-btn">Create</button>
