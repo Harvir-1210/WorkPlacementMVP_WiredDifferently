@@ -82,14 +82,74 @@ a {
     padding: 20px;
     box-sizing: border-box;
     width: 180px;
+    height: 120px;
     margin: 0;
     box-shadow: 0 10px 20px rgb(45, 126, 95);
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     transition: background-color 0.3s;
 }
 
 .display-card:hover {
-  background-color: rgb(126, 253, 175)
+  background-color: rgb(126, 253, 175);
+}
+
+.display-card.purple {
+    color: rgb(71, 28, 107);
+    background-color: rgb(195, 153, 230);
+}
+
+.display-card.purple:hover {
+    background-color: rgb(182, 110, 241);
+}
+
+.display-card.gold {
+    background-color: rgb(240, 196, 94);
+}
+
+.display-card.gold:hover {
+    background-color: rgb(244, 189, 60);
+}
+
+.display-card.blue {
+    background-color: rgb(147, 195, 243);
+}
+
+.display-card.blue:hover {
+    background-color: rgb(109, 174, 239);
+}
+
+.display-card.green {
+    background-color: rgb(190, 255, 190);
+}
+
+.display-card.green:hover {
+    background-color: rgb(140, 249, 138);
+}
+
+.display-card.pink {
+    background-color: rgb(255, 182, 206);
+}
+
+.display-card.pink:hover {
+    background-color: rgb(246, 130, 169);
+}
+
+.display-card.red {
+    background-color: rgb(254, 129, 118);
+}
+
+.display-card.red:hover {
+    background-color: rgb(247, 89, 74);
+}
+
+.display-card.orange {
+    background-color: rgb(247, 167, 98);
+}
+
+.display-card.orange:hover {
+    background-color: rgb(240, 146, 65);
 }
 
 .card-link {
@@ -97,6 +157,65 @@ a {
     font-size: 1.3rem;
     color: rgb(32, 109, 64);
     padding: 10px;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    text-align: center;
+}
+
+.display-card.purple .card-link {
+    color: rgb(51, 32, 58);
+}
+
+.display-card.gold .card-link {
+    color: rgb(80, 60, 10);
+}
+
+.display-card.blue .card-link {
+    color: rgb(37, 27, 71);
+}
+
+.display-card.green .card-link {
+    color: rgb(18, 56, 20);
+}
+
+.display-card.pink .card-link {
+    color: rgb(120, 68, 112);
+}
+
+.display-card.red .card-link {
+    color: rgb(91, 39, 39);
+}
+
+.display-card.orange .card-link {
+    color: rgb(107, 60, 30);
+}
+
+#card-information-container.purple {
+    background-color: rgb(195, 153, 230);
+}
+
+#card-information-container.gold {
+    background-color: rgb(240, 196, 94);
+}
+
+#card-information-container.blue {
+    background-color: rgb(147, 195, 243);
+}
+
+#card-information-container.green {
+    background-color: rgb(190, 255, 190);
+}
+
+#card-information-container.pink {
+    background-color: rgb(255, 182, 206);
+}
+
+#card-information-container.red {
+    background-color: rgb(254, 129, 118);
+}
+
+#card-information-container.orange {
+    background-color: rgb(247, 167, 98);
 }
 
 #edit-btn, #delete-btn {
@@ -124,4 +243,12 @@ a {
 
 #delete-btn:hover {
     background-color: rgb(255, 100, 100);
+}
+
+.explanation {
+  font-size: 1.2em;
+  white-space: normal;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: normal;
 }
