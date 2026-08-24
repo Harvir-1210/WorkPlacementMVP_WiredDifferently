@@ -54,6 +54,10 @@ a {
   background-color: rgb(27, 244, 63);
 }
 
+.font-ui {
+  font-size: 0.8em;
+}
+
 fieldset {
     border: 1px solid gray;
     border-radius: 5px;
