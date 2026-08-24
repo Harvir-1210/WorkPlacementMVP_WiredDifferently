@@ -15,10 +15,10 @@ if (activeCards.length > 0) {
     cards.forEach((card, index) => {
         if (!card) return;
         const flashCard = document.createElement("section");
-        flashCard.className = "display-card";
+        flashCard.className = `display-card ${card.colour || "default"}`;
         flashCard.innerHTML = `
             <a href="prototype_flash_info.html" class="card-link" data-index="${index}">
-                Flash Card ${index + 1}
+                ${card.name || `Flash Card ${index + 1}`}
             </a>
         `;
         flashCardContainer.appendChild(flashCard);
