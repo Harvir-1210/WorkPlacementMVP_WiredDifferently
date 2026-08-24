@@ -141,6 +141,67 @@ input, input::placeholder, textarea {
   background-color: rgb(19, 147, 170);
 }
 
+#colour-options {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 80px;
+  margin-top: 10px;
+}
+
+#colour-options label {
+  cursor: pointer;
+}
+
+#colour-options input {
+  display: none;
+}
+
+.colour-choice {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: capitalize;
+  width: 90px;
+  height: 40px;
+  border: 3px solid transparent;
+  box-sizing: border-box;
+  color: white;
+  font-size: 0.9rem;
+}
+
+#colour-options input:checked + .colour-choice {
+  border-color: black;
+}
+
+.purple {
+  background-color: rgb(150, 100, 190);
+}
+
+.gold {
+  background-color: rgb(218, 170, 55);
+}
+
+.blue {
+  background-color: rgb(100, 160, 220);
+}
+
+.green {
+  background-color: rgb(100, 180, 120);
+}
+
+.pink {
+  background-color: rgb(220, 130, 160);
+}
+
+.red {
+  background-color: rgb(255, 85, 70);
+}
+
+.orange {
+  background-color: rgb(235, 130, 40)
+}
+
 .create-btn {
   cursor: pointer;
   background-color: rgb(123, 239, 229);
