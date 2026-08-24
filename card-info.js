@@ -5,6 +5,8 @@ if (selectedCard === null || !cards[Number(selectedCard)]) {
   throw new Error("No flash card selected.")
 }
 const card = cards[Number(selectedCard)];
+const cardInformationContainer = document.getElementById("card-information-container");
+cardInformationContainer.classList.add(card.colour || "default");
 
 document.getElementById("explanation-text").textContent = card.explanation;
 document.getElementById("trait").textContent = card.trait;
