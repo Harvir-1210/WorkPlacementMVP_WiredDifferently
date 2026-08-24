@@ -1,7 +1,10 @@
 const disabilitySelect = document.getElementById("disability");
 const subCategory = document.getElementById("sub-category");
 const subCategoryOptions = document.getElementById("sub-category-options");
+const subCategoryTitle = document.getElementById("sub-category-title");
 const formOptions = document.getElementById("form-options");
+const cardName = document.getElementById("name");
+const colourOptions = document.getElementById("colour-options")
 const submitButton = document.getElementById("submit-btn");
 const editingCard = localStorage.getItem("editingCard");
 const editIndex = editingCard !== null ? Number(editingCard) : null;
@@ -32,19 +35,49 @@ function createTraitOptions(type, value1, value2) {
     subCategoryOptions.classList.add("animate");
 };
 
+function createColourOptions(colours) {
+    colourOptions.innerHTML = "";
+    colours.forEach(colour => {
+        colourOptions.innerHTML += `
+            <label>
+                <input type="radio" name="card-colour" value="${colour}">
+                <span class="colour-choice ${colour}">${colour}</span>
+            </label>
+        `;
+    });
+}
+
 disabilitySelect.addEventListener("change", () => {
     if (disabilitySelect.value === "Verbalism") {
         createTraitOptions('verbal-type', 'Non-verbal', 'Hyper-verbal');
+        createColourOptions(["blue", "purple"]);
+        subCategoryTitle.style.display = "block";
+
     } else if (disabilitySelect.value === "Sensory") {
         createTraitOptions('sensory-type', 'Sensory Seeker', 'Sensory Sensitive');
+        createColourOptions(["green", "pink"]);
+        subCategoryTitle.style.display = "block";
+
     } else if (disabilitySelect.value === "Support") {
         createTraitOptions('support-type', 'Low-support', 'High-support');
+        createColourOptions(["gold", "blue"]);
+        subCategoryTitle.style.display = "block";
+
+    } else if (disabilitySelect.value === "Monotropic") {
+        createColourOptions(["red", "orange"]);
+        subCategoryOptions.innerHTML = "";
+        subCategory.style.display = "block";
+        subCategoryTitle.style.display = "none";
+
     } else {
         subCategory.style.display = "none";
         subCategoryOptions.innerHTML = "";
+        colourOptions.innerHTML = ""
         return;
     }
-    subCategory.style.display = "block";
+    if (disabilitySelect.value !== "Monotropic") {
+        subCategory.style.display = "block";
+    }
 });
 
 if (editingCard !== null) {
@@ -56,9 +89,17 @@ if (editingCard !== null) {
 
     if (card) {
         disabilitySelect.value = card.trait;
+        cardName.value = card.name || "";
         document.getElementById("explain").value = card.explanation;
 
         disabilitySelect.dispatchEvent(new Event("change"));
+
+        const savedColour = document.querySelector(
+            `input[name="card-colour"][value="${card.colour || "default"}"]`
+        );
+        if (savedColour) {
+            savedColour.checked = true;
+        }
 
         setTimeout(() => {
             const typeOption = document.querySelector(`input[value="${card.type}"]`);
@@ -80,12 +121,17 @@ formOptions.addEventListener("submit", (event) => {
         alert("Please choose a trait.");
         return;
     }
+    const selectedColour = document.querySelector(
+        "input[name='card-colour']:checked"
+    );
     const selectedType = document.querySelector("input[type='radio']:checked");
     if (!selectedType && disabilitySelect.value != "Monotropic") {
         alert("Please choose a trait type.");
         return;
     }
     const flashCard = {
+        name: cardName.value.trim(),
+        colour: selectedColour ? selectedColour.value : "default",
         trait: disabilitySelect.value,
         type: selectedType ? selectedType.value : "General",
         explanation: document.getElementById("explain").value
