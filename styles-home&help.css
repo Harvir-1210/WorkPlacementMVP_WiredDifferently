@@ -63,6 +63,10 @@ header {
   background-color: rgb(27, 244, 63);
 }
 
+.font-ui {
+  font-size: 0.6em;
+}
+
 .logo {
   width: 235px;
   height: auto;
