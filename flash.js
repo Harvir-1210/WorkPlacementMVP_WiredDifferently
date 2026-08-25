@@ -37,20 +37,39 @@ function createTraitOptions(type, value1, value2) {
 
 function createColourOptions(colours) {
     colourOptions.innerHTML = "";
+
     colours.forEach(colour => {
         colourOptions.innerHTML += `
-            <label>
+            <label class="colour-option">
                 <input type="radio" name="card-colour" value="${colour}">
                 <span class="colour-choice ${colour}">${colour}</span>
             </label>
         `;
-        const colourRadio = document.querySelector(`input[value="${colour}"]`);
-        colourRadio.addEventListener("click", (event) => {
-            event.preventDefault();
-            colourRadio.checked = !colourRadio.checked;
-        });
     });
 }
+
+colourOptions.addEventListener("mousedown", (event) => {
+    const label = event.target.closest(".colour-option");
+
+    if (!label) return;
+
+    const radio = label.querySelector("input");
+
+    radio.dataset.wasChecked = radio.checked;
+});
+
+colourOptions.addEventListener("click", (event) => {
+    const label = event.target.closest(".colour-option");
+
+    if (!label) return;
+
+    const radio = label.querySelector("input");
+
+    if (radio.dataset.wasChecked === "true") {
+        event.preventDefault();
+        radio.checked = false;
+    }
+});
 
 disabilitySelect.addEventListener("change", () => {
     if (disabilitySelect.value === "Verbalism") {
