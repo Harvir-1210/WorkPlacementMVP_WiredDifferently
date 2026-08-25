@@ -47,9 +47,7 @@ function createColourOptions(colours) {
         const colourRadio = document.querySelector(`input[value="${colour}"]`);
         let selectedColour = false;
         colourRadio.addEventListener("mousedown", () => {
-            if (colourRadio.checked === true) {
-                selectedColour = colourRadio;
-            }
+            selectedColour = colourRadio.checked;
         });
         colourRadio.addEventListener("click", () => {
             if (selectedColour) {
