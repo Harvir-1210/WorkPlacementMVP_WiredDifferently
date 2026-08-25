@@ -45,14 +45,8 @@ function createColourOptions(colours) {
             </label>
         `;
         const colourRadio = document.querySelector(`input[value="${colour}"]`);
-        let selectedColour = false;
-        colourRadio.addEventListener("mousedown", () => {
-            selectedColour = colourRadio.checked;
-        });
         colourRadio.addEventListener("click", () => {
-            if (selectedColour) {
-                colourRadio.checked = false;
-            }
+            colourRadio.checked = !colourRadio.checked;
         });
     });
 }
