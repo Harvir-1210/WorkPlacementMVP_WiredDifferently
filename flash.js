@@ -45,7 +45,8 @@ function createColourOptions(colours) {
             </label>
         `;
         const colourRadio = document.querySelector(`input[value="${colour}"]`);
-        colourRadio.addEventListener("click", () => {
+        colourRadio.addEventListener("click", (event) => {
+            event.preventDefault();
             colourRadio.checked = !colourRadio.checked;
         });
     });
