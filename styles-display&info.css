@@ -11,7 +11,7 @@ body {
     max-width: 600px;
     margin: 20px auto;
     padding: 10px 20px;
-    box-shadow: 0 10px 20px;
+    box-shadow: 0 10px 20px rgb(83, 93, 97);
 }
 
 h1 {
@@ -84,7 +84,7 @@ a {
     width: 180px;
     height: 120px;
     margin: 0;
-    box-shadow: 0 10px 20px;
+    box-shadow: 0 10px 20px rgb(83, 93, 97);
     display: flex;
     justify-content: center;
     align-items: center;
