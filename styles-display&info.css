@@ -11,7 +11,7 @@ body {
     max-width: 600px;
     margin: 20px auto;
     padding: 10px 20px;
-    box-shadow: 0 10px 20px rgb(45, 126, 58);
+    box-shadow: 0 10px 20px;
 }
 
 h1 {
